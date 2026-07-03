@@ -1,0 +1,72 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1px;
+    color: white;
+}
+
+.c1, .c2, .text, .c3, .c4, .c5, .c6, .c7, .c8, .c9, .c10, .c11, .c12 {
+    background-color: red;
+    display: grid;
+    align-items: center;
+    text-align: center;
+    
+}
+
+.c1 {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+.c2 {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+.text {
+    grid-column: span 4;
+    grid-row: span 4;
+}
+
+.c4 {
+    grid-column: span 2;
+}
+
+.c5 {
+    grid-column: span 2;
+}
+
+.c6 {
+    grid-column: span 2;
+}
+
+.c7 {
+    grid-column: span 2;
+}
+
+.c8 {
+    /*grid-row: span 1;*/
+}
+
+.c9 {
+    grid-column: span 2;
+}
+
+.c10 {
+    grid-column: span 2;
+}
+
+.c11 {
+    grid-column: span 5;
+}
+
+.c12 {
+    grid-column: span 2;
+}

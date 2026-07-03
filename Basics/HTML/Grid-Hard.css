@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.topsidebar, .cont3, .rightsidebar {
+    background-color: red;
+}
+
+.topbarleft, .cont4 {
+    background-color: aqua;
+}
+
+.topbarright, .cont1 {
+    background-color: burlywood;
+}
+
+.bottomsidebar, .cont2 {
+    background-color: rgb(255, 255, 255);
+}
+
+.container {
+    height: 100vh;
+    width: minmax(950px, 1fr);
+    display: grid;
+    grid-template-areas: 
+    "ts tbl tbl tbr tbr"
+    "ts cn1 cn2 cn2 rsb"
+    "bs cn1 cn2 cn2 rsb"
+    "bs cn3 cn3 cn4 rsb";
+    gap: 5px;
+    background-color: rgb(0, 0, 0);
+    padding: 5px;
+}
+
+.topsidebar {
+    grid-area: ts;
+}
+
+.bottomsidebar {
+    grid-area: bs;
+}
+
+.topbarleft {
+    grid-area: tbl;
+}
+
+.topbarright {
+    grid-area: tbr;
+}
+
+.cont1 {
+    grid-area: cn1;
+}
+.cont2 {
+    grid-area: cn2;
+}
+.cont3 {
+    grid-area: cn3;
+}
+.cont4 {
+    grid-area: cn4;
+}
+
+.rightsidebar {
+    grid-area: rsb;
+}

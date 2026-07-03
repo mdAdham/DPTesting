@@ -1,0 +1,39 @@
+
+.container {
+
+}
+
+.navBar {
+    height: 8vh;
+    display: flex;
+    justify-content: space-around;
+    background-color: lightskyblue;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.hamburger {
+    display: none;
+}
+
+.Cnamelogo {
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (max-width: 440px) {
+    a {
+        display: none;
+    }
+    .hamburger {
+        display: block;
+    }
+    .navBar {
+        text-align: right;
+        padding-right: 10px;
+    }
+}
