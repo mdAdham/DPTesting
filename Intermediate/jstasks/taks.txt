@@ -1,0 +1,12 @@
+1. Create a function that accepts any number of arguments and returns their sum.
+
+2. Create a calculator using functions.
+Operations:
+
+Addition
+Subtraction
+Multiplication
+Division
+Modulus
+
+3. Count the digits in a number.
