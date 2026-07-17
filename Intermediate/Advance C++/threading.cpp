@@ -13,8 +13,9 @@ void display()
 
 int main()
 {
+    cout << "Hello\n";
     thread t(display);
     t.join();
-    cout << "Hello";
+    cout << "Hello\n";
     return 0;
 }
