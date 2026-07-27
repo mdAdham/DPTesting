@@ -1,8 +1,6 @@
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.util.*;
-import java.io.*;
 
 class Person implements Serializable{
     int id;
