@@ -1,0 +1,237 @@
+Tasks
+Task 1
+
+Create
+
+Return
+
+
+Welcome to My Website
+
+
+Task 2
+
+Create
+/about
+Return
+
+
+This is About Page
+
+Task 3
+
+Create
+
+
+/name/<username>
+
+
+Output
+
+
+Hello username
+
+
+Task 4
+
+Create
+
+/cube/<number>
+
+
+Output
+
+Cube = number³
+
+
+Task 5
+
+Create
+
+/vote/<age>
+
+If age >=18
+
+Eligible
+
+Else
+
+Not Eligible
+
+
+Task 1 - Student Management
+
+Create the following APIs:
+
+* `GET /students` → Display all students.
+* `POST /students` → Add a new student (`id`, `name`, `department`).
+* `PUT /students/<id>` → Update only the student's department.
+
+
+
+## Task 2 - Product Management
+
+Maintain a product list.
+
+* `GET /products`
+* `POST /products`
+
+  * `id`
+  * `name`
+  * `price`
+* `PUT /products/<id>`
+
+  * Update only the product price.
+
+
+
+## Task 3 - Employee Details
+
+Store employee information.
+
+* `GET /employees`
+* `POST /employees`
+
+  * `id`
+  * `name`
+  * `salary`
+* `PUT /employees/<id>`
+
+  * Increase the salary by the given amount.
+
+
+
+## Task 4 - Library System
+
+Maintain book records.
+
+* `GET /books`
+* `POST /books`
+
+  * `id`
+  * `title`
+  * `author`
+* `PUT /books/<id>`
+
+  * Update the author name.
+
+
+
+## Task 5 - Movie Collection
+
+Create APIs for movies.
+
+* `GET /movies`
+* `POST /movies`
+
+  * `id`
+  * `movie_name`
+  * `rating`
+* `PUT /movies/<id>`
+
+  * Update the movie rating.
+
+
+
+## Task 6 - Customer Details
+
+Maintain customer information.
+
+* `GET /customers`
+* `POST /customers`
+
+  * `id`
+  * `name`
+  * `city`
+* `PUT /customers/<id>`
+
+  * Change the customer's city.
+
+
+
+## Task 7 - Hospital Management
+
+Maintain patient records.
+
+* `GET /patients`
+* `POST /patients`
+
+  * `id`
+  * `name`
+  * `disease`
+* `PUT /patients/<id>`
+
+  * Update the disease.
+
+
+
+## Task 8 - College Management
+
+Maintain student marks.
+
+* `GET /marks`
+* `POST /marks`
+
+  * `id`
+  * `name`
+  * `mark`
+* `PUT /marks/<id>`
+
+  * Update the mark.
+
+
+
+## Task 9 - Mobile Store
+
+Maintain mobile details.
+
+* `GET /mobiles`
+* `POST /mobiles`
+
+  * `id`
+  * `brand`
+  * `price`
+* `PUT /mobiles/<id>`
+
+  * Update the mobile price.
+
+
+
+## Task 10 - Restaurant Menu
+
+Maintain food menu.
+
+* `GET /foods`
+* `POST /foods`
+
+  * `id`
+  * `food_name`
+  * `price`
+* `PUT /foods/<id>`
+
+  * Update the food price.
+
+
+
+ Challenge Task (Intermediate)
+
+Create a **Bank Account API**.
+
+**Fields:**
+
+* `account_no`
+* `holder_name`
+* `balance`
+
+Implement:
+
+* `GET /accounts` → Display all accounts.
+* `POST /accounts` → Create a new account.
+* `PUT /accounts/<account_no>` → Deposit an amount into the account by updating the balance.
+
+> **Bonus:** If the account number doesn't exist, return:
+
+json
+{
+    "message": "Account Not Found"
+}
