@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 
 app = Flask(__name__)
 
@@ -40,7 +40,7 @@ students = [
 def printstud():
     return students
 
-@app.route("/addStudent", methods=["POST"])
+@app.route("/students", methods=["POST"])
 def addStudent():
     data = request.json
     students.append(data)
@@ -64,6 +64,16 @@ def updateStudent(id):
     
     return {"message": "Unable to update student"}
     
+@app.route("/students/<int:id>", methods=["DELETE"])
+def deleteStudent(id):
+    for stu in students:
+        if stu["id"] == id:
+            students.remove(stu)
+            return {
+                "message": "Delete Successfully",
+                "Student": stu
+            }
+    return { "Message": "Unable to Delete Student"}
 
 if __name__ == "__main__":
     app.run(debug=True)
