@@ -1,9 +1,19 @@
-from flask import request
+from flask import request, render_template
 from dataBase.db import cursor, connection
 
+# normal
+# def getStudents():
+#     cursor.execute("select * from STUDENTS")
+#     return cursor.fetchall()
+
+# for HTML
 def getStudents():
     cursor.execute("select * from STUDENTS")
-    return cursor.fetchall()
+    students_ = cursor.fetchall()
+    return render_template(
+        "index.html", stu=students_
+    )
+    
 
 def addStudent():
     data = request.json
