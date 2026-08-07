@@ -29,17 +29,14 @@ def getStudent(id):
 # data = {"STUDENTNAME": "name", "COURSENAME": "cse", "AGE": 17}
 def updateStudent(id):
     data = request.json
-    for s in getStudents():
-        if s["ID"] == id:
-            sql = """update STUDENTS set STUDENTNAME=%s, COURSENAME=%s, AGE=%s where ID=%s"""
-            values = (data["STUDENTNAME"], data["COURSENAME"], data["AGE"],  id)
-            cursor.execute(sql, values)
-            connection.commit()
-            return {
-                "message": "Data Updated Successfully",
-                "Updated Data": getStudent(id)
-            }
-    return { "message": "Update Failed" }
+    sql = """update STUDENTS set STUDENTNAME=%s, COURSENAME=%s, AGE=%s where ID=%s"""
+    values = (data["STUDENTNAME"], data["COURSENAME"], data["AGE"],  id)
+    cursor.execute(sql, values)
+    connection.commit()
+    return {
+        "message": "Data Updated Successfully",
+        "Updated Data": getStudent(id)
+    }
 
 def deleteStudent(id):
     sql = """delete from STUDENTS where ID=%s"""
