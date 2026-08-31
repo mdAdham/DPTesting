@@ -1,15 +1,16 @@
 import random
 import string
+import time
 
 # --- Configuration ---
-TARGET = "Every character has a 1% chance of changing during mutation."
+TARGET = "BackupCookie686"
 POPULATION_SIZE = 100
 MUTATION_RATE = 0.01  # 1% chance per character
 
 # --- Helper Functions ---
 def get_random_char():
     """Returns a random printable character."""
-    pool = string.ascii_letters + string.digits + " !.,;:%"
+    pool = string.ascii_letters + string.digits + " !.,;:%@#$^&*()"
     return random.choice(pool)
 
 def create_random_string(length):
@@ -61,6 +62,28 @@ def run_evolution():
             next_generation.append(offspring)
             
         population = next_generation
+        
+def speedtest():
+    timings = []
+    for i in range(100):
+        start = time.time()*1000
+        run_evolution()
+        end = time.time()*1000
+        timings.append(int(end-start))
+        
+    timings.sort()
+    
+    print(timings[0])
+    print(timings[1])
 
 if __name__ == "__main__":
+    # start = time.time()*1000
     run_evolution()
+    # end = time.time()*1000
+    
+    # print (start)
+    # print (end)
+    
+    # print(int(end-start))
+    
+    # speedtest()

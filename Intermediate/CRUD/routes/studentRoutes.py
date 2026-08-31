@@ -7,7 +7,7 @@ students = Blueprint("students", __name__) #equivalent to -> # if __name__ == "_
 def getall():
     return getStudents()
 
-@students.route("/add", methods=["POST"])
+@students.route("/add", methods=["POST", "GET"])
 def addstud():
     return addStudent()
 
@@ -15,10 +15,14 @@ def addstud():
 def getstud(iD):
     return getStudent(iD)
 
-@students.route("/updatestu/<int:iD>", methods=["PUT"])
+@students.route("/edit/<int:iD>", methods=["GET"])
+def edit(iD):
+    return editStudent(iD)
+
+@students.route("/updatestu/<int:iD>", methods=["PUT", "POST"])
 def updatestud(iD):
     return updateStudent(iD)
 
-@students.route("/removestu/<int:iD>", methods=["DELETE"])
+@students.route("/removestu/<int:iD>", methods=["DELETE", "GET"])
 def deletestud(iD):
     return deleteStudent(iD)

@@ -1,4 +1,4 @@
-from flask import request, render_template
+from flask import request, render_template, redirect, url_for
 from dataBase.db import cursor, connection
 
 # normal
@@ -14,20 +14,43 @@ def getStudents():
         "index.html", stu=students_
     )
     
+#for postman
+# def addStudent():
+#     data = request.json
+#     sql = """INSERT INTO STUDENTS(STUDENTNAME, COURSENAME, AGE) VALUES(%s, %s, %s)"""
+#     cursor.execute(sql, (
+#         data["STUDENTNAME"],
+#         data["COURSENAME"],
+#         data["AGE"]
+#     ))
+#     connection.commit()
+#     return {
+#         "message": "Student Added Successfully"
+#     }
 
+#for html    
 def addStudent():
-    data = request.json
+    if request.method == "GET":
+        return render_template("add.html")
+    
+    studentName = request.form["studentName"]
+    studentCourse = request.form["courseName"]
+    studentAge = request.form["studentAge"]
     sql = """INSERT INTO STUDENTS(STUDENTNAME, COURSENAME, AGE) VALUES(%s, %s, %s)"""
     cursor.execute(sql, (
-        data["STUDENTNAME"],
-        data["COURSENAME"],
-        data["AGE"]
+        studentName,
+        studentCourse,
+        studentAge
     ))
     connection.commit()
-    return {
-        "message": "Student Added Successfully"
-    }
     
+    cursor.execute("select * from STUDENTS")
+    students_ = cursor.fetchall()
+        
+    # return redirect("/")
+    return redirect(url_for("students.getall"))
+
+
 def getStudent(id):
     sql = """select * from STUDENTS where id=%s"""
     value = id
@@ -37,16 +60,45 @@ def getStudent(id):
 
 # Updating the name, age and the course
 # data = {"STUDENTNAME": "name", "COURSENAME": "cse", "AGE": 17}
+#for postman
+# def updateStudent(id):
+#     data = request.json
+#     sql = """update STUDENTS set STUDENTNAME=%s, COURSENAME=%s, AGE=%s where ID=%s"""
+#     values = (data["STUDENTNAME"], data["COURSENAME"], data["AGE"],  id)
+#     cursor.execute(sql, values)
+#     connection.commit()
+#     return {
+#         "message": "Data Updated Successfully",
+#         "Updated Data": getStudent(id)
+#     }
+
+def editStudent(id):
+    sql="""select * from STUDENTS where id=%s"""
+    value = id
+    cursor.execute(sql, value)
+    student = cursor.fetchone()
+    return render_template("edit.html", student=student)
+    
+
 def updateStudent(id):
-    data = request.json
+    if request.method == "POST":
+        studentName = request.form["studentName"]
+        studentCourse = request.form["studentCourse"]
+        studentAge = request.form["studentAge"]
+
+    elif request.method == "PUT":
+        data = request.get_json()
+
+        studentName = data["studentName"]
+        studentCourse = data["studentCourse"]
+        studentAge = data["studentAge"]
+        
     sql = """update STUDENTS set STUDENTNAME=%s, COURSENAME=%s, AGE=%s where ID=%s"""
-    values = (data["STUDENTNAME"], data["COURSENAME"], data["AGE"],  id)
+    values = (studentName, studentCourse, studentAge, id)
     cursor.execute(sql, values)
     connection.commit()
-    return {
-        "message": "Data Updated Successfully",
-        "Updated Data": getStudent(id)
-    }
+    return redirect("/")
+
 
 def deleteStudent(id):
     sql = """delete from STUDENTS where ID=%s"""
@@ -54,6 +106,10 @@ def deleteStudent(id):
     removeddata = getStudent(id)
     cursor.execute(sql, values)
     connection.commit()
+    
+    if request.method == "GET":
+        return redirect("/")
+
     return {
         "message": "Student Deleted Successfully",
         "Student": removeddata
