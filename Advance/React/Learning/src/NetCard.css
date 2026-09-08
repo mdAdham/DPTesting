@@ -1,0 +1,110 @@
+.net-card {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    margin: 10px;
+    padding: 5px 5px;
+
+    margin-top: 30px;
+
+    text-align: left;
+
+    border: solid 1px #333542;
+    border-radius: 10px;
+
+    box-shadow: 0px 0px 15px 2px #0e0e12;
+
+    background-color: #1f2028;
+
+    box-sizing: border-box;
+}
+
+.most-popular {
+    margin-top: 0px;
+}
+
+.popular {
+    text-align: center;
+    padding: 10px;
+
+    margin: -5px -5px 10px -5px;
+
+    border: solid 1px #333542;
+    border-radius: 9px 9px 0px 0px;
+
+    background-color: #001e94;
+}
+
+.popular > h5 {
+    margin: 0px;
+    padding: 0px;
+    line-height: 4px;
+
+    color: whitesmoke;
+}
+
+.details > hr {
+    background-color: gray;
+    border: none;
+    height: 1px;
+}
+
+.topic {
+    /* background-color: #2c3359; */
+    background: #001e94;
+    background: linear-gradient(170deg, 
+        rgba(0, 30, 148, 1) 0%,
+        rgba(0, 95, 247, 1) 69%);
+    padding: 1px 10px;
+    border: solid 1px grey;
+    border-radius: 10px;
+}
+
+.Basic {
+    background: #006594;
+    background: linear-gradient(170deg,
+    rgba(0, 30, 148, 1) 0%,
+    rgba(99, 0, 247, 1) 69%);
+}
+
+.Standard {
+    background: #003994;
+    background: linear-gradient(167deg, 
+    rgba(0, 57, 148, 1) 0%, 
+    rgba(165, 0, 247, 1) 68%);
+}
+
+.Premium {
+    background: #003994;
+    background: linear-gradient(160deg, 
+    rgba(0, 57, 148, 1) 38%, 
+    rgba(247, 0, 0, 1) 100%);
+}
+
+.topic > h2 {
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+
+.topic > h3 {
+    margin: 0px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.details {
+    padding: 10px;
+}
+
+.points {
+    /* background-color: blue; */
+    margin: 20px 0px;
+}
+
+.points > p {
+    font-weight: 350;
+    margin-bottom: 1px;
+}
+.points > h4 {
+    margin: 0px;
+}
