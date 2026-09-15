@@ -87,6 +87,8 @@ function App(){
   let title = Object.keys(students[0]);
   console.log(title);
 
+  let options = [5, 10, 20, 35, 50];
+
   let [search, setSearch] = useState("");
   const filteredStudents = students.filter((item)=>
     item.name.toLowerCase().includes(search.toLowerCase())
@@ -113,11 +115,7 @@ function App(){
 
       <input type='text' placeholder='Filter' onChange={handleSearching}></input>
       <select value={rows} onChange={handleRows}>
-        <option value={5}>5</option>
-        <option value={10}>10</option>
-        <option value={20}>20</option>
-        <option value={35}>35</option>
-        <option value={50}>50</option>
+        {options.map((item)=>(<option value={item}>{item}</option>))}
       </select>
 
       <table>
