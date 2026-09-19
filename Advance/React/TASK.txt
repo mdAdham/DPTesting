@@ -1,0 +1,13 @@
+ORGANIC FARM ECOM
+
+Vertical SideBar
+
+with logo + company name
+
+cards dont needed
+
+categories:
+    fruits
+    vegetables
+    greens
+    meat

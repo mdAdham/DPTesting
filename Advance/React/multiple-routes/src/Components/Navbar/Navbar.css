@@ -1,0 +1,10 @@
+.Navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    color: red;
+}
+
+a {
+    color: red;
+}

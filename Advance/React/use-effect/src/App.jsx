@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import Card from "./Card";
+
+import './App.css'
 
 const App = ()=>{
   const [count, setCount] = useState(0);
@@ -38,6 +41,10 @@ const App = ()=>{
   return (
     <div className="App">
       <button onClick={handleAdd}>Click {count}</button>
+
+      <div className="card-container">
+        {products.map((item)=><Card {...item}/>)}
+      </div>
     </div>
   );
 }
