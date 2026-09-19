@@ -1,0 +1,25 @@
+:root {
+  --bg: rgb(60, 100, 40);
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+.App {
+  min-height: 100vh;
+  background-color: var(--bg);
+  display: grid;
+  grid-template-columns: minmax(0px, 300px) auto;
+}
+
+.route-page {
+  margin: 10px;
+  padding: 10px;
+
+  background: #166e0b;
+  background: linear-gradient(180deg, rgba(22, 110, 11, 1) 0%, rgba(58, 133, 89, 1) 50%, rgba(98, 150, 0, 1) 100%);
+
+  border-radius: 15px;
+}
