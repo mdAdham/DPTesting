@@ -9,7 +9,8 @@ function Sidebar(){
                 <div className="name"><h1>Adham Organic Shop</h1></div>
             </div>
 
-            <Link to="/">All</Link>
+            <Link to="/">Home</Link>
+            <Link to="/all">All</Link>
             <Link to="/vegetables">Vegetables</Link>
             <Link to="/fruits">Fruits</Link>
             <Link to="/greens">Greens</Link>

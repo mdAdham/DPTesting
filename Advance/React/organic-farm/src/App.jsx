@@ -5,6 +5,7 @@ import Vegetables from './Pages/vegetables/vegetables'
 import Fruits from './Pages/fruits/fruits'
 import Greens from './Pages/greens/greens'
 import Meat from './Pages/meat/meat'
+import Home from './Pages/Home/Home'
 
 import "./App.css"
 
@@ -15,7 +16,8 @@ function App(){
         <Sidebar/>
         <div className="route-page">
           <Routes>
-            <Route path='/' element={<All/>} />
+            <Route path='/' element={<Home/>} />
+            <Route path='/all' element={<All/>} />
             <Route path='/vegetables' element={<Vegetables/>} />
             <Route path='/fruits' element={<Fruits/>} />
             <Route path='/greens' element={<Greens/>} />
