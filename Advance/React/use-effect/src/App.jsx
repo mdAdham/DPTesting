@@ -11,13 +11,14 @@ const App = ()=>{
 
     const fetchData = async()=>{
       try {
-        const res = await fetch("https://fakestoreapi.com/products/");
+        const res = await fetch("https://dummyjson.com/products");
         if (!res){
           throw Error("Unable to connect the API");
         }
         else {
           const prod = await res.json();
-          setProducts(prod);
+          // console.log("The products are: ", prod.products);
+          setProducts(prod.products);
         }
       }
       catch(error) {

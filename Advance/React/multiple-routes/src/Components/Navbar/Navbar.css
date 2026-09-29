@@ -2,9 +2,15 @@
     display: flex;
     width: 100%;
     justify-content: space-around;
-    color: red;
+
+    background-color: rgb(65, 65, 65);
+
+    margin: 0px;
+    padding: 10px;
 }
 
 a {
-    color: red;
+    color: white;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }

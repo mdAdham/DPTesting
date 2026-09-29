@@ -1,13 +1,17 @@
 import { useContext } from "react";
 import { PassingValue } from "../../App";
 import Card from "../../Components/Card/Card";
-import "../../Global/CSS/CardContainer.css"
 
-function All () {
-    const product = useContext(PassingValue);
+import "./Fragrances.css"
+import '../../Global/CSS/CardContainer.css'
+
+const Fragrances = ()=>{
+    const products = useContext(PassingValue);
+
+    const product = products.filter(item=>item.category==="fragrances");
 
     return (
-        <div className="All">
+        <div>
             <div className="cardcontainer">
                 {product.map((item)=><Card key={item.id} {...item}/>)}
             </div>
@@ -15,4 +19,4 @@ function All () {
     );
 }
 
-export default All;
+export default Fragrances;
