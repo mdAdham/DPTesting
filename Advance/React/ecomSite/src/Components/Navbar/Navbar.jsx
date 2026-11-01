@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 import "./Navbar.css"
 import { useDispatch, useSelector } from 'react-redux'
 import { logout } from '../../Slice/authSlice'
@@ -19,18 +19,25 @@ const Navbar = ({openCart}) => {
   return (
     <div className='Navbar'>
         <Link to='/'className='Logo'>Ecom Shop</Link>
-        <div className="navLink">
-          <Link to='/'>Home</Link>
-          <Link to='/mens'>Mens</Link>
-          <Link to='/jewelllery'>Jewellery</Link>
-          <Link to='/electronics'>Electronics</Link>
-          <Link to='/womens'>Womens</Link>
+        <div className="navLink d-flex">
+          <NavLink to='/' exact="true">Home</NavLink>
+          <NavLink to='/category/mens'>Mens</NavLink>
+          <NavLink to='/category/jewelery'>Jewelery</NavLink>
+          <NavLink to='/category/electronics'>Electronics</NavLink>
+          <NavLink to='/category/womens'>Womens</NavLink>
+          <Link to='/checkout'></Link>
         </div>
         <div className="navRight">
           <div className="placeHolder"></div>
           <span className="userEmail">{email}</span>
-          <button className='cartBtn' onClick={openCart} aria-label={`Open cart,$`}>Cart {cartCount}</button>
-          <button onClick={handleLogout}>Logout</button>
+          <button className='cartBtn' onClick={openCart} aria-label={`Open cart,$`}>
+            Cart <span className="cartCount">
+              {cartCount}
+              </span>
+          </button>
+          <button onClick={handleLogout} className="LogoutBtn">
+            Logout
+          </button>
         </div>
     </div>
   )

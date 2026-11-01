@@ -1,33 +1,94 @@
+:root{
+    --primaryColor:#2563eb;
+    --linkColor:#475569;
+}
+
 .Navbar {
-    width: 100vw;
-    height: 12vh;
-    background-color: goldenrod;
+    width:95vw;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: white;
+    min-height: 12vh;
+    padding: 16px 5%;
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.Logo {
+    font-size: 1.7em;
+    font-weight: 800;
+    color: var(--primaryColor);
+}
+
+.navLink {
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 22px;
+}
+
+.navLink a {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--linkColor);
+}
+
+.navLink a:hover,
+.navLink a.active {
+    color: var(--primaryColor);
 }
 
 .navRight {
+    padding: 0px 25px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 15px;
-}
-
-.placeHolder {
-    width: 100px;
-    height: 30px;
-    border-radius: 70%;
-    background-color: white;
-}
-
-a {
-    text-decoration: none;
-    color: white;
-    font-size: 1.28em;
-    padding: 10px;
+    gap: 35px;
 }
 
 .userEmail {
+    font-size: 0.9em;
+    color: #64748b;
+}
+
+.cartBtn {
+    position: relative;
+    border: none;
+    background: none;
+    color: #1e293b;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.cartCount {
+    position: absolute;
+    top: -7px;
+    right:-23px;
+    height: 20px;
+    width: 20px;
+    background-color: #ef4444;
     color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+.LogoutBtn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    background-color: #fee2e2;
+    color: #b91c1c;
+    font-weight: 600;
 }

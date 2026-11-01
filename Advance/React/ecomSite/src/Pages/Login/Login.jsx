@@ -17,22 +17,25 @@ const Login = ()=>{
     };
 
     return (
-        <div className="Login">
-            <form onSubmit={handleLogin} className="LoginForm">
-                <div className="email">
-                    <label htmlFor="email">
-                        Email
-                    </label>
-                    <input type="text" placeholder="Enter your email" name="email" required autoComplete="off"></input>
-                </div>
-                <div className="password">
-                    <label htmlFor="password">
-                        Password
-                    </label>
-                    <input type="password" placeholder="Enter your password" name="password" required autoComplete="off"></input>
-                </div>
-                <button type="submit">Login </button>
-            </form>
+        <div className="LoginPage">    
+            <div className="Login">
+                <form onSubmit={handleLogin} className="LoginForm">
+                    <h1>Login Form</h1>
+                    <div className="email">
+                        <label htmlFor="email">
+                            Email
+                        </label>
+                        <input type="text" placeholder="Enter your email" name="email" required autoComplete="off"></input>
+                    </div>
+                    <div className="password">
+                        <label htmlFor="password">
+                            Password
+                        </label>
+                        <input type="password" placeholder="Enter your password" name="password" required autoComplete="off"></input>
+                    </div>
+                    <button type="submit" className="LoginBtn">Login </button>
+                </form>
+            </div>
         </div>
     );
 }

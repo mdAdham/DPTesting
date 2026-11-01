@@ -1,0 +1,9 @@
+.Category {
+    min-height: 70vh;
+    padding: 40px 5%;
+}
+
+.Category h1 {
+    margin-bottom: 13px;
+    text-transform: uppercase;
+}

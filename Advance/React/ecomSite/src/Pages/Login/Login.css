@@ -1,60 +1,86 @@
-* {
-    box-sizing: border-box;
-}
-
-.Login {
-    width: 500px;
-    height: 500px;
-    background: linear-gradient(rgb(157, 0, 255),
-        rgb(0, 234, 234));
+.LoginPage {
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.Login {
+    width: 600px;
+    height: 500px;
+    background: linear-gradient(
+        135deg,
+        #dbeafe,
+        #effeff,
+        #f8fafc
+    );
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    padding: 20px;
+}
+
 .LoginForm {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    /* gap: 15px; */
+    background-color: white;
 
-    width: 100%;
-    height: 60%;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    width: 80%;
+    box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
+    padding: 40px;
+    border-radius: 18px;
+}
+
+.LoginForm h1 {
+    color: #2563eb;
+    text-align: center;
 }
 
 label {
+    color: #2563eb;
     font-size: 1.2em;
     font-weight: 600;
-    /* margin-right: 20px; */
-    color: white;
+    margin-right: 20px;
 }
 
 .email, .password {
     display: flex;
-    width: 100%;
     flex-direction: column;
-    align-items: center;
     gap: 15px;
+    width: 70%;
 }
 
-input {
+.LoginForm input {
+    padding: 15px;
+    border-radius: 15px;
+    width: 100%;
+    outline: none;
+    border: 1px solid #cdb5e1;
+    color: #2563eb;
+    background-color: rgb(249, 249, 249);
+}
+
+.LoginForm input:focus {
+    border-color: #2563eb;
+    background-color: white;
+    color: #1d4ed8;
+}
+
+.LoginBtn {
     padding: 15px 25px;
     border-radius: 15px;
-    width: 80%;
-    outline: none;
-    border: none;
-    background-color: white;
-    color: black;
-    width: 70%;
+    background-color: #2563eb;
+    font-weight: 600;
+    color: white;
 }
 
-button {
-    padding: 10px 40px;
-    border-radius: 15px;
-    outline: none;
-    border: none;
-    background-color: white;
-    color: black;
-    width: 70%;
+.LoginBtn:hover {
+    background-color: #1d4ed8;
+    transform: scale(1.05);
+    transition: .3s ease;
 }
