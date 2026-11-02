@@ -28,7 +28,9 @@ const Navbar = ({openCart}) => {
           <Link to='/checkout'></Link>
         </div>
         <div className="navRight">
-          <div className="placeHolder"></div>
+          <div className="placeHolder">
+            <i class="fa-solid fa-bars"></i>
+          </div>
           <span className="userEmail">{email}</span>
           <button className='cartBtn' onClick={openCart} aria-label={`Open cart,$`}>
             Cart <span className="cartCount">

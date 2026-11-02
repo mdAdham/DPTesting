@@ -3,6 +3,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { clearCart } from '../../Slice/cartSlice'
 
+import "./Checkout.css"
+
 const Checkout = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
@@ -38,7 +40,7 @@ const Checkout = () => {
       <div className='checkoutLayout'>
         <form className='checkoutForm' onSubmit={handleOrder}>
           <h2>Customer Details</h2>
-          <label>userName:</label>
+          <label>Username:</label>
           <input type='text' name='name' value={customer.name} onChange={handleChange} required></input>
           <label>Email:</label>
           <input type='email' name='email' value={customer.email} onChange={handleChange} required></input>

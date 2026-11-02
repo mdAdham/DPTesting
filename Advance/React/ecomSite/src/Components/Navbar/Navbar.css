@@ -68,8 +68,8 @@
 
 .cartCount {
     position: absolute;
-    top: -7px;
-    right:-23px;
+    top: -2px;
+    right:-5px;
     height: 20px;
     width: 20px;
     background-color: #ef4444;
@@ -91,4 +91,20 @@
     background-color: #fee2e2;
     color: #b91c1c;
     font-weight: 600;
+}
+
+.placeHolder {
+    display: none;
+}
+
+@media screen and (max-width: 1220px){
+    .navLink,
+    .userEmail,
+    .LogoutBtn{
+        display: none;
+    }
+
+    .placeHolder {
+        display: block;
+    }
 }
