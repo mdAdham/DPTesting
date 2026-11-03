@@ -95,6 +95,68 @@
 
 .placeHolder {
     display: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+.menuOverlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.15);
+    z-index: 999;
+}
+
+.mobileSidebar {
+    position: fixed;
+    top: 0;
+    right: -320px;
+    width: 300px;
+    max-width: 85vw;
+    height: 100vh;
+    background-color: white;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.15);
+    transition: right 0.3s ease;
+    z-index: 1000;
+    box-sizing: border-box;
+}
+
+.mobileSidebar.active {
+    right: 0;
+}
+
+.mobileSidebar a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1.2em;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.mobileSidebar a:hover {
+    background-color: #1e293b;
+    color: white;
+}
+
+.closeBtn {
+    align-items: flex-end;
+    border: none;
+    background-color: #ef4444;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.mobileEmail {
+    font-size: 14px;
+    color: #1e293b;
+}
+
+.mobileLogoutBtn {
+
 }
 
 @media screen and (max-width: 1220px){
@@ -106,5 +168,16 @@
 
     .placeHolder {
         display: block;
+        font-size: 1.5em;
+    }
+
+    .menuOverlay {
+
+    }
+}
+
+@media screen and (min-width: 1221px) {
+    .mobileSidebar.menuOverlay {
+        display: none;
     }
 }
